@@ -1,4 +1,4 @@
-name: VirTect
+name: EukTect
 channels:
   - bioconda
   - conda-forge
