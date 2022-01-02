@@ -9,7 +9,7 @@ $ conda env create -f environment.yml
 $ source activate EukTect
 ```
 
-## Step 2. Train and test the model
+## Step 2. Fit and test the model
 This step randomly selects and downloads 50 eukaryotic genomes, 20 viral genomes, 15 bacterial genomes, and 15 archaeal genomes to use for training of a SVM. I go through up to 50 kb of each genome, breaking them into 5 kb long non-overlapping chunks/contigs. Then, I use a sliding window to count canonical kmers (word size of 5) in each contig - assigning each contig as eukaryotic or other (meaning bacterial, archaeal, or viral) in the process. Then, I calculate the frequencies of the canonical kmers and use this to train a SVM. This step uses the NCBI RefSeq summary table (https://ftp.ncbi.nih.gov/genomes/refseq/assembly_summary_refseq.txt) downloaded on 2022-01-01. This table is included in the git repo because it changes periodically and it is randomly sampled; thus, different results could be obtained if different versions of the table were used.
 ```
 $ python 01_train_and_test.py
