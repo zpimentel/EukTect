@@ -17,12 +17,11 @@ $ python 01_train_and_test.py
 I reached a fairly high accuracy in the testing set (96.7%). However, it must be remembered that while the testing set contigs were not seen by the model, they come from the same genomes that the training contigs did. Therefore, there are very likely to be biases associated with this testing data set.  
 
 ## Step 3. Validation on genomes not seen by the model
-This steps performs validation of the model using new genomes that the model has not seen before. I used 10 bacterial and 10 eukaryotic genomes. While this is not many, I created thousands of contigs that were independently tested from each of these genomes. Therefore, thousands of contigs were ultimately tested. Another approach would be to download more genomes and to sample a smaller number of contigs from each one.
+This steps performs validation of the model using new genomes that the model has not seen before. I used 10 eukaryotic genomes, 10 viral genomes, 10 bacterial genomes, and 10 archaeal genomes. 
 ```
-$ jupyter lab
-# Open and run 02_validation.ipynb
+$ python 02_validation.py
 ```
-From this test, I reached an accuracy of 100%. However, I know there is still work to be done such as inclusion of some GC-rich bacteria in the training data.   
+From this test, I reached an accuracy of 90.2% on the validation genomes.
 
 ## Step 4. Test the model on a user-defined sequence
 This step allows a user to input a sequence and a prediction will be generated whether it is of eukaryotic origin. Sequence should generally be > ~ 3 kb. Currently unknown how archaeal or viral contigs would be classified.
