@@ -21,7 +21,7 @@ This steps performs validation of the model using new genomes that the model has
 ```
 $ python 02_validation.py
 ```
-From this test, I reached an accuracy of 90.2% on the validation genomes.
+From this test, I reached an accuracy of 90.2% on the validation genomes. This will be updated to assess the accuracy indepdently for eukaryotic, bacterial, archaeal, and viral contigs.
 
 ## Step 4. Test the model on a user-defined sequence
 This step allows a user to input a sequence and a prediction will be generated whether it is eukaryotic or not. Sequence must be in the form of a fasta file. As of right now, only one (the first) sequence per fasta file will be used for the prediction. Sequence should generally be > ~ 2.5 kb.
