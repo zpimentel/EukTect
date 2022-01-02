@@ -4,6 +4,7 @@ Development of a SVM to identify eukaryotic contigs from bacterial, archaeal, an
 ## Step 1. Prepare the environment
 ```
 $ git clone git@github.com:zpimentel/EukTect.git
+$ cd EukTect
 $ conda env create -f environment.yml
 $ source activate EukTect
 ```
