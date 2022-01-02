@@ -14,7 +14,7 @@ This step randomly selects and downloads 50 eukaryotic genomes, 20 viral genomes
 ```
 $ python 01_train_and_test.py
 ```
-I reached a fairly high accuracy in the testing set (96.7%). However, it must be remembered that while the testing set contigs were not seen by the model, they come from the same genomes that the training contigs did. Therefore, there are very likely to be biases associated with this testing data set.  
+I reached a fairly high accuracy in the testing set (97.6%). However, it must be remembered that while the testing set contigs were not seen by the model, they come from the same genomes that the training contigs did. Therefore, there are very likely to be biases associated with this testing data set.  
 
 ## Step 2. Validation on genomes not seen by the model
 This steps performs validation of the model using new genomes that the model has not seen before. I used 10 eukaryotic genomes, 10 viral genomes, 10 bacterial genomes, and 10 archaeal genomes. 
