@@ -24,9 +24,8 @@ $ python 02_validation.py
 From this test, I reached an accuracy of 90.2% on the validation genomes.
 
 ## Step 4. Test the model on a user-defined sequence
-This step allows a user to input a sequence and a prediction will be generated whether it is of eukaryotic origin. Sequence should generally be > ~ 3 kb. Currently unknown how archaeal or viral contigs would be classified.
+This step allows a user to input a sequence and a prediction will be generated whether it is eukaryotic or not. Sequence must be in the form of a fasta file. As of right now, only one (the first) sequence per fasta file will be used for the prediction. Sequence should generally be > ~ 2.5 kb.
 ```
-$ jupyter lab
-# Open and run 03_apply_model.ipynb
+$ python 03_apply_model.py {FASTA_FILE}
 ```
 
