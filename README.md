@@ -9,7 +9,7 @@ $ source activate EukTect
 ```
 
 ## Step 2. Train and test the model
-This step randomly selects 50 bacterial and 50 eukaryotic genomes to use for training of a SVM. I go through up to 1 Mb of each genome, breaking them into 50 kb long non-overlapping chunks/contigs. Then, I use a sliding window to count canonical kmers (word size of 5) in each contig - assigning each contig as eukaryotic or bacterial in the process. Then, I calculate the frequencies of the kmers and use this to train a SVM.
+This step randomly selects 50 bacterial and 50 eukaryotic genomes to use for training of a SVM. I go through up to 1 Mb of each genome, breaking them into 50 kb long non-overlapping chunks/contigs. Then, I use a sliding window to count canonical kmers (word size of 5) in each contig - assigning each contig as eukaryotic or bacterial in the process. Then, I calculate the frequencies of the kmers and use this to train a SVM. This step uses the NCBI RefSeq summary table (https://ftp.ncbi.nih.gov/genomes/refseq/assembly_summary_refseq.txt) downloaded on 2022-01-01. This table is included in the git repo because it changes periodically and it is randomly sampled; thus, different results could be obtained if different versions of the table were used.
 ```
 $ jupyter lab
 # Open and run 01_train_and_test.ipynb
