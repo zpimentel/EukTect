@@ -25,7 +25,12 @@ def is_fasta(filename):
 
 if __name__ == "__main__":
 
-    infile = sys.argv[1]
+    try:
+        infile = sys.argv[1]
+    except IndexError:
+        print("You did not specify a fasta file")
+        sys.exit(1)
+
     if not os.path.exists(infile):
         raise Exception("Input file does not exist.")
 
